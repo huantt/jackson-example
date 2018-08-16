@@ -32,4 +32,12 @@ class People {
     String toString() {
         return "Name: $name \nFull Name: $fullName\nAge: $age"
     }
+
+    @Override
+    boolean equals(Object people) {
+        people = (People) people
+        boolean isEquals = this.name.equals(people.name) && this.age == people.age && this.fullName.equals(people.fullName)
+        return isEquals
+    }
+
 }
